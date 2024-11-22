@@ -1,0 +1,258 @@
+/* Overlay que cubre toda la pantalla */
+.comentario-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.comentario-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+
+  max-height: 80vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.comentario-content.scroll-activo {
+  overflow-y: auto;
+  /* Activa el desplazamiento vertical cuando hay más de 3 reseñas */
+}
+
+.cerrar-comentario {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+}
+
+.comentario-principal {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaf4fe;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 160px;
+  padding-top: 5px;
+
+}
+
+.comentario-contenedor {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaf4fe;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 150px;
+}
+
+.titulo-reseña {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #5a63b8;
+  margin: 0 0 0px;
+}
+
+.usuario-comentario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.usuario-comentario p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px;
+}
+
+.rating .star {
+  font-size: 24px;
+  color: darkgray;
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+.rating .star.gold {
+  color: gold;
+}
+
+.escribir-contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0;
+}
+
+.escribir-control {
+  border: none;
+  border-bottom: 2px solid rgba(154, 173, 225, 0.726);
+  background-color: transparent;
+  padding: 5px;
+  font-size: 1rem;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+p.escribir-control {
+  margin: 0;
+}
+
+.escribir-control:focus {
+  outline: none;
+  border-bottom-color: rgba(172, 192, 225, 0.9);
+}
+
+.botones-contenedor {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 3px;
+}
+.btn-publicar {
+  padding: 6px 12px;
+  background-color: #234489;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.btn-cancelar-com:hover,
+.btn-eliminar-com:hover,
+.btn-publicar:hover {
+  background-color: #7F879E;
+  transform: translateY(-2px);
+}
+
+.message {
+  padding: 4px;
+  margin: 5px 0;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  animation: fadeIn 1s ease-out;
+}
+
+.ocultar {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos Responsivos */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .comentario-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .titulo-reseña {
+    font-size: 1.2em;
+  }
+
+  .rating .star {
+    font-size: 20px;
+  }
+
+  .btn-cancelar,
+  .btn-publicar {
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .comentario-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .titulo-reseña {
+    font-size: 1em;
+  }
+
+  .usuario-comentario {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rating {
+    flex-wrap: wrap;
+  }
+
+  .escribir-control {
+    font-size: 0.9rem;
+    max-height: 80px;
+  }
+
+  .btn-cancelar,
+  .btn-publicar {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+}
+
+.ver-mas-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.star.gold {
+  color: gold;
+}
+
+#cerrar-comentario {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+}
+
+.btn-eliminar-com {
+  padding: 6px 12px;
+  background-color: #234489;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.btn-eliminar-com:hover {
+  background-color: #7F879E;
+  transform: translateY(-2px);
+}

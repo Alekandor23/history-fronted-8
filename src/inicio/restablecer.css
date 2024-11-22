@@ -1,0 +1,248 @@
+.Navbar-restablecer {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #001745;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.logo-nombreR {
+    display: flex;
+    width: 100%;
+    max-width: 310px;
+    align-items: center;
+}
+
+.logo-buttonR {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.logoR {
+    margin-right: 10px;
+}
+
+.img-logo-Restablecer {
+    width: 100%;
+    max-width: 40px;
+    max-height: 35px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.nombre-Restablecer {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+
+.nombre-Restablecer h3 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.todo-restablecer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.restablecer-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    height: 100%;
+    min-height: 530px;
+    border-radius: 30px;
+    top: 15%;
+    transform: translateX(-50%);
+    background-color: #113c70;
+}
+
+.restablecer-imagen {
+    margin-right: 10px;
+}
+
+.foto {
+    margin-right: 10px;
+    width: 100%;
+    max-width: 270px;
+    max-height: 310px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    border: #FEF7F6 solid 3px;
+}
+
+.foto-restablecer {
+    width: 100%;
+    max-width: 210px;
+    max-height: 230px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.restablecer-imagen p {
+    font-size: 20px;
+    font-style: italic;
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    color: #c7c1c1;
+    margin: 0;
+}
+
+.registro-container {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    min-height: 540px;
+    border-radius: 40px;
+    background-color: #113c70;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.form-restablecer {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    transform: translateX(50%);
+    background-color: #7F879E;
+    height: 100%;
+    border-radius: 20px;
+    max-height: 540px;
+    flex-direction: column;
+}
+
+.form-restablecer h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 10px 10px 10px;
+    color: #333;
+}
+
+.form-restablecer p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 15px 5px 0px 25px;
+    color: #212121;
+}
+
+.form-restablecer form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-restablecer input {
+    width: 100%;
+    max-width: 800px;
+}
+
+.input_box {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.input_box h4 {
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+    justify-content: left;
+    padding-top: 10px;
+}
+
+.input_box input {
+    width: 100%;
+    min-width: 400px;
+    padding: 5px 5px 5px 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input_box #ojitoR {
+    position: absolute;
+    top: 38%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.input_box #ojitoRestablecer {
+    position: absolute;
+    top: 88%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-restablecer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    top: 0;
+}
+
+.button-restablecer button {
+    padding: 8px 8px;
+    top: 0;
+    font-size: 16px;
+    min-width: 400px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #001745;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.button-restablecer button:hover {
+    background-color: #BFBFCA;
+    color:#212121;
+    border: #212121 solid 3px;
+}

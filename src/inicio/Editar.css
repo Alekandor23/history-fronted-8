@@ -1,0 +1,319 @@
+/* General Container */
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  padding: 30px 40px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.user-info-E{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.container-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Header */
+.edit-profile-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cambio-contraseña-tab p {
+  font-size: 15px;
+}
+
+.default-avatar {
+  font-size: 60px;
+  color: #ccc;
+}
+
+.default-avatar i {
+  font-size: inherit;
+}
+
+.photo-profile {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.upload-avatar-button {
+  position: absolute;
+  top: 100%;
+  left: 53%;
+  transform: translate(-50%, 10px);
+  cursor: pointer;
+  background-color: #20335C;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-960%);
+}
+
+.bi.bi-card-image {
+  font-size: 1.2rem;
+  color:#f1f1f1;
+}
+
+.upload-avatar-button:hover {
+  background-color: #7F879E;
+  color: #000;
+}
+
+/* Tabs */
+.tabs-edit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: #ccc solid 0.3px;
+}
+
+.tabs-edit p {
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  margin: 5px 5px 5px 5px;
+}
+
+.tab-edit {
+  flex: 1;
+  padding: 5px 0;
+  align-items: center;
+  text-align: center;
+  border: none;
+  background-color: #f1f1f1;
+  color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 5px;
+  max-width: 300px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-edit:last-child {
+  margin-right: 0;
+}
+
+.tab-edit.active {
+  background: #20335C;
+  color: #fff;
+}
+
+.tab-edit:hover {
+  background: #7F879E;
+  color: #000;
+}
+
+/* Form */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-datos-personales input[type="text-E"],
+.form-datos-personales input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.modcampoP{
+  text-align: right;
+  margin: auto;
+}
+.form-datos-personales input[type="text-E"]:focus, input[type="date"]:focus {
+  border-color: #001745;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.form-datos-personales label {
+  font-size: 15px;
+  margin: 0px 0px 10px;
+}
+
+.modify-link {
+  font-size: 12px;
+  color: #20335C;
+  text-decoration: none;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.modify-link:hover {
+  color: #7F879E;
+  text-decoration: underline;
+}
+
+form>*:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.btn-editar-perfil{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+.btn-guardarP, .btn-cancelarP{
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #20335C ;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.btn-guardarP:hover, .btn-cancelarP:hover{
+  background-color: #7F879E;
+}
+
+/* Password Change Modal */
+.cambio-contraseña-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cambio-contraseña-tab h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.cambio-contraseña-tab p {
+  margin: 10px 0 15px;
+  color: #333;
+}
+
+.input-container-camContra {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-container-camContra input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.input-container-camContra i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+.con-btn-cambio {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.con-btn-cambio .btn-cambiar-p {
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 18px;
+  font-size: 16px;
+  background-color: #20335C;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.con-btn-cambio .btn-cambiar-p:hover {
+  background-color: #7F879E;
+  color: #e0e0e0;
+}

@@ -1,0 +1,617 @@
+/* autores favoritos  */
+.autor-favorito {
+  transition: transform 0.3s ease; /* Transición suave para agrandar */
+ 
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 2.2rem; /* Ajusta el tamaño del corazón */
+  margin: 0 10px; /* Agrega un margen alrededor del corazón */
+}
+
+.heart {
+  transition: transform 0.3s ease; /* Transición suave para agrandar */
+ 
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 2.2rem; /* Ajusta el tamaño del corazón */
+  margin: 0 10px; /* Agrega un margen alrededor del corazón */
+}
+
+.heart:hover {
+
+  transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+
+/*NAVBAR  SECUNDARIO Y LA FLECHA DE  ATRAS*/
+/* Contenedor principal para flecha, portada y botones */
+.contenedor-flecha-navbar2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  height: fit-content;
+  padding-top: 0px;
+}
+
+.row-campana {
+  position: absolute;
+  top: 14%;
+  right: 20px;
+  font-size: 20px;
+  background-color: #BFBFCA;
+  color: #20335C;
+  padding: 5px 8px 5px 8px;
+  max-width: 45px;
+  max-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50px, 16px);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.row-campana:hover {
+  background-color: #20335C;
+  color: #fff;
+  transform: translate(-50px, 16px) scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos Responsivos */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .row-campana {
+    position: absolute;
+    top: 10%;
+    right: 15px;
+    font-size: 18px;
+    background-color: #BFBFCA;
+    color: #20335C;
+    padding: 4px 7px;
+    max-width: 40px;
+    max-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-40px, 12px);
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .row-campana:hover {
+    background-color: #20335C;
+    color: #fff;
+    transform: translate(-40px, 12px) scale(1.1);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .row-campana {
+    position: absolute;
+    top: 8%;
+    right: 10px;
+    font-size: 16px;
+    background-color: #BFBFCA;
+    color: #20335C;
+    padding: 3px 6px;
+    max-width: 35px;
+    max-height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-30px, 10px);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .row-campana:hover {
+    background-color: #20335C;
+    color: #fff;
+    transform: translate(-30px, 10px) scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Flecha a la izquierda */
+.contenedor-flecha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  padding-left: 50px;
+  padding-top: 2px;
+}
+
+#otro {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#otro:hover {
+  transform: scale(1.2);
+  /* Efecto de aumento */
+  color: white;
+  /* Color más llamativo */
+}
+
+/* Contenedor para los botones */
+.contenedor-botones {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* Estilo de los botones */
+.boton-navbar {
+  background-color: #20335C;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Efecto al pasar el cursor */
+.boton-navbar:hover {
+  transform: scale(1.1);
+  background-color: #7F879E;
+}
+
+/* Estilo del botón activo */
+.boton-navbar.active {
+  background-color: #001745;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .contenedor-botones {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .boton-navbar {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contenedor-botones {
+    flex-direction: column;
+    /* Coloca los botones en una columna para móviles */
+    align-items: center;
+    /* Centra los botones */
+    gap: 10px;
+    /* Ajusta el espacio entre botones */
+  }
+
+  .boton-navbar {
+    width: 100%;
+    /* Los botones ocupan todo el ancho disponible */
+    max-width: 300px;
+    /* Máximo ancho para evitar que sean demasiado grandes */
+    text-align: center;
+    /* Centra el texto dentro de los botones */
+  }
+}
+
+
+
+
+/*CONTEDEDOR DE LIBROS */
+
+.contenedor-de-libros {
+  display: grid;
+  grid-template-columns: 0.35fr 0.75fr;
+  background-color: transparent;
+  column-gap: 20px;
+  padding: 0 4%;
+
+
+
+  gap: 20px;
+
+}
+
+@media (max-width: 768px) {
+  .contenedor-de-libros {
+    grid-template-columns: 2fr;
+
+  }
+
+}
+
+.contenedor-completo {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenedor-completo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-portada {
+  width: 100%;
+  background-color: #f3f3f3;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.imagen-portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contenedor-completo:hover .imagen-portada {
+  filter: brightness(1.1);
+}
+
+.contenedor-titulo {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
+}
+
+.contedor-titulo-hoy{
+  font-size: 30px;
+  font-weight: 500;
+}
+.contenedor-completo:hover .contenedor-titulo {
+  background-color: #f5f5f5;
+}
+
+/* Responsividad para tablets y dispositivos pequeños */
+@media (max-width: 768px) {
+  .contenedor-completo {
+    max-width: 80%;
+  }
+
+  .contenedor-titulo {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividad para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .contenedor-completo {
+    max-width: 90%;
+  }
+
+  .contenedor-titulo {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+.contenedor-DDR {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+
+.libro-audio {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-leer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  border: none;
+  border-radius: 45%;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, easetransform 0.3s ease;
+}
+
+.btn-leer:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-leer:active {
+  background-color: #d0d0d0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-leer:hover::after {
+  content: attr(title);
+  /* Muestra el texto del atributo title */
+  position: absolute;
+  background-color: #656666;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+#otro1 {
+  font-size: 35px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.btn-leer:hover #otro1 {
+  transform: scale(1.2);
+}
+
+.btn-leer:hover #otro1 {
+  transform: scale(1.2);
+}
+
+.row {
+
+  background: transparent;
+}
+
+
+/*RESUMEN */
+
+.contenedor-title-resumen {
+  background-color: #b1b091;
+  border-radius: 10px;
+
+}
+
+.contenedor-title-resumen h1 {
+
+  color: white;
+  text-align: center;
+
+
+}
+
+.scrollspy-example {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #d0d0bd;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+
+}
+
+.scrollspy-example p{
+  margin: 10px 10px 10px 10px;
+  font-size: 22px;
+}
+
+/*DESCRIPCION*/
+
+.container-Descripcion {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  border: 5px solid transparent;
+  margin: auto;
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.contenedor-title-descripcion {
+  background-color: #b1b091;
+  border-radius: 10px;
+}
+
+.contenedor-title-descripcion h1 {
+
+  color: white;
+  text-align: center;
+}
+
+.sip-obj-container {
+  width: 100%;
+  background-color: #E8E0C8;
+}
+
+.card-box {
+  flex: 1;
+  background-color: #d0d0bd;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-color: black;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.card-box h3{
+  font-size: 16px;
+}
+.card-box h4{
+  font-size: 20px;
+  font-weight: 700;
+}
+.card-box:hover {
+  transform: translateY(-5px);
+  background-color: #b1b091;
+}
+
+h2 {
+
+  text-decoration-color: black;
+}
+
+
+
+/*DETALLES*/
+
+
+.contenedor-detalle {
+  max-width: 1000px;
+  /* Tamaño máximo para pantallas grandes */
+  margin: 0 auto;
+  /* Centra el contenedor */
+  padding: 10px;
+  /* Espaciado interno */
+}
+
+.contenedor-title-detalles {
+  background-color: #b1b091;
+  margin-bottom: 20px;
+  /* Espacio debajo del título */
+  border-radius: 10px;
+}
+
+.contenedor-title-detalles {
+
+  color: white;
+  text-align: center;
+}
+
+
+.contenedor-de-detalles {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos se ajusten en líneas si no hay suficiente espacio */
+  gap: 20px;
+  /* Espacio entre cada detalle */
+}
+
+
+.detalles-box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+flex: 1 1 100%; /* Cada detalle ocupará 45% del ancho y se ajustará si hay espacio disponible */
+background-color: #d0d0bd; 
+padding: 10px; /* Espaciado interno para todos los lados */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+border-radius: 10px; /* Bordes redondeados */
+transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza la transición al pasar el cursor */
+color: #120d1a; /* Color del texto */
+}
+
+.detalles-box {
+  display: flex;
+  width: 100%;
+  flex: 1 1 100%;
+  background-color: #d0d0bd;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #120d1a;
+}
+
+.detalles-box:hover {
+  transform: translateY(-5px);
+  background-color: #b1b091;
+}
+
+.detalles-box h6{
+  font-size: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .detalles-box {
+    flex: 1 1 100%;
+    /* En pantallas pequeñas, cada detalle ocupará el 100% del ancho */
+  }
+}
+
+
+/*--------------------TITULO DE AUDIOTEXTO-----------------------------*/
+
+
+.contenedor-audiotex {
+  padding-left: 2%;
+  padding-right: 2%;
+
+
+
+}
+
+.titulo-del-audiolibro {
+  background-color: #4a6896;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 10px;
+
+
+
+
+
+
+}
+
+.contenedor-textoaudio {
+
+  padding-left: 13%;
+  padding-right: 13%;
+
+}
+
+.scrollspy-textoaudio {
+  max-height: 700px;
+  /* Ajusta la altura máxima del cuadro según tus necesidades */
+  overflow-y: scroll;
+  /* Habilita el scroll vertical */
+  overflow-x: hidden;
+  /* Esconde el scroll horizontal si no es necesario */
+  background-color: #978676;
+
+  border-radius: 15px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  border: 1px solid #ddd;
+  /* Borde claro */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+  margin-top: 25px;
+
+
+}

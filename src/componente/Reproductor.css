@@ -1,0 +1,164 @@
+/*------------------Reproductor----------------------*/
+
+.player-container {
+    position: fixed;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #021d2a; /* color de fondo del reproductor */
+
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 5px;
+    z-index: 1000;
+    /* para asegurarse de que esté encima de otros elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    /* sombra para darle un efecto flotante */
+}
+
+.player-header {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1px;
+}
+
+.player-header i {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.player-header i:hover {
+    color: #6e0000;
+    /* Cambia el color cuando se pasa el cursor, por ejemplo, naranja */
+    transform: scale(2);
+    /* Efecto de agrandar un poco al pasar el mouse */
+}
+
+.contenedor-de-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Ajuste del ancho total de los controles */
+}
+
+.rate-control,
+.player-controls,
+.volume-control {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.rate-control {
+    gap: 5px;
+}
+
+/* Ajustes para centrar los controles de reproducción */
+.player-controls {
+    flex: 3;
+    display: flex;
+    justify-content: space-evenly;
+    /* Distribuye los íconos de forma uniforme */
+    align-items: center;
+}
+
+.player-controls i {
+    font-size: 2rem;
+    /* Tamaño de los íconos de reproducción */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Agrandamos específicamente el botón de play/pausa */
+.bi-play-circle,
+.bi-pause {
+    font-size: 3.5rem;
+    /* Tamaño más grande para resaltar */
+}
+
+/* Efecto hover en los íconos */
+.player-controls i:hover,
+.volume-control i:hover,
+.rate-control i:hover {
+    transform: scale(1.2);
+}
+
+/* Volumen */
+.volume-control {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top:5px;
+    margin-bottom: 7px;
+    justify-content: space-between; /* Distribuir el tiempo a los lados */
+
+}
+
+.progress-container input[type="range"],
+.volume-control input[type="range"] {
+    flex: 1;
+    margin: 0 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.progress-container input[type="range"]:hover {
+    background-color: #add8e6;
+    /* Cambia el color de fondo al pasar el cursor a azul claro */
+    transform: scale(1.01);
+    /* Efecto de agrandar ligeramente al pasar el mouse */
+}
+
+.volume-control input[type="range"]:hover {
+    background-color: #add8e6;
+    /* Cambia el color de fondo al pasar el cursor a azul claro */
+    transform: scale(1.04);
+    /* Efecto de agrandar ligeramente al pasar el mouse */
+}
+
+.progress-container .time {
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Ajuste para el select de velocidad */
+.rate-control select {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+    /* Cambia el cursor a mano */
+}
+
+.rate-control select:hover {
+    /* Cambia el color de fondo al pasar el cursor a azul claro 
+     background-color: #add8e6; */
+    transform: scale(1.05);
+    /* Efecto de agrandar ligeramente al pasar el mouse */
+}
+
+/* Efecto hover para los íconos de volumen y otros controles */
+.volume-control i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}

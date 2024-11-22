@@ -1,0 +1,344 @@
+.Navbar-login {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #001745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    max-height: 70px;
+    z-index: 1050;
+}
+
+.logo-nombre-login {
+    display: flex;
+    width: 100%;
+    max-width: 310px;
+    align-items: center;
+}
+
+.logo-button-login {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    /* Elimina el padding por defecto del botón */
+}
+
+.logo-login {
+    margin-right: 10px;
+}
+
+.img-logo-login {
+    width: 100%;
+    max-width: 40px;
+    max-height: 35px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.nombre-app-login {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+
+.nombre-app-login h3 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/*-----------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cuerpo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    max-width: 100%;
+}
+
+.flecha-Login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+#Login-flecha {
+    font-size: 1.5rem;
+    cursor: pointer;
+    left: 50%;
+    padding-left: 30%;
+}
+
+.contenedor-LG-R {
+    background-color: #BFBFCA;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 580px;
+}
+
+.contenedor-LG-R p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.contenedor-LG-R span {
+    font-size: 12px;
+}
+
+.contenedor-LG-R a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.contenedor-LG-R a:hover {
+    color: #404F72;
+}
+
+.contenedor-LG-R button {
+    background-color: #20335C;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contenedor-LG-R button:hover {
+    background-color: #7F879E;
+    transform: translateY(-2px);
+}
+
+.contenedor-LG-R button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.contenedor-LG-R form {
+    background-color: #BFBFCA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+    max-height: 1000px;
+}
+
+.contenedor-LG-R input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.contenedor-formulario {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.inicio-sesion {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.contenedor-LG-R.active .inicio-sesion {
+    transform: translateX(100%);
+}
+
+.registro {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.contenedor-LG-R.active .registro {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.contenedor-toggle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.contenedor-LG-R.active .contenedor-toggle {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+    background-color: #001745;
+    height: 100%;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.contenedor-LG-R.active .toggle {
+    transform: translateX(50%);
+}
+
+.panel-toggle {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    top: s0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.panel-izquierda {
+    transform: translateX(-200%);
+}
+
+.contenedor-LG-R.active .panel-izquierda {
+    transform: translateX(0);
+    color: #FEF7F6;
+}
+
+.panel-derecha {
+    right: 0;
+    transform: translateX(0);
+    color: #FEF7F6;
+}
+
+.contenedor-LG-R.active .panel-derecha {
+    transform: translateX(200%);
+    color: #FEF7F6;
+}
+
+#ojo {
+    position: absolute;
+    top: 52.3%;
+    right: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.input-container #ojoRegistro {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.input-container #ojitoConfirm {
+    position: absolute;
+    top: 75%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.imagen-panel-inicio {
+    width: 200px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 200px;
+    /* Mantén la proporción de la imagen */
+    margin-bottom: 20px;
+    /* Añade espacio entre la imagen y el texto */
+    border-radius: 10px;
+    /* Opcional: redondea los bordes */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Opcional: añade sombra */
+}
+
+.imagen-panel-registro {
+    width: 200px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 200px;
+    /* Mantén la proporción de la imagen */
+    margin-bottom: 20px;
+    /* Añade espacio entre la imagen y el texto */
+    border-radius: 10px;
+    /* Opcional: redondea los bordes */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Opcional: añade sombra */
+}

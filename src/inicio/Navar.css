@@ -1,0 +1,333 @@
+/* ----------------------------------ESTILOS DE NAVBAR---------------------------------------------------------------------------------- */
+.Navbar {
+    /*Cuerpo Principal de Navbar*/
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #001745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    z-index: 1050;
+}
+
+/*---------------------------------------Tres lineas--------------------------------------------------*/
+.btn-treslineas {
+    width: 100%;
+    max-width: 40px;
+    background-color: #1d3557;
+    padding: 10px;
+    margin-right: 15px;
+    justify-content: center;
+}
+
+.btn-treslineas:hover {
+    background-color: #a8b5dc;
+}
+
+#treslinaes {
+    font-size: 1.1rem;
+    color: ghostwhite;
+}
+
+/*---------------------------------------Logo y Hombre en el navbar--------------------------------------------------*/
+.logo-nombre {
+    display: flex;
+    width: 100%;
+    max-width: 310px;
+    align-items: center;
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    /* Elimina el padding por defecto del botón */
+}
+
+.logo-button:hover {
+    background: none;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.img-logo {
+    width: 100%;
+    max-width: 40px;
+    max-height: 35px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.nombre-app {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+
+.nombre-app h3 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/*---------------------------------------Buscador en el navbar--------------------------------------------------*/
+.contenedor-buscador {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    flex-grow: 1;
+
+}
+
+.form-search {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 15px;
+    ;
+
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+
+
+}
+
+.btn-buscador {
+    width: 100%;
+    max-width: 5px;
+    position: absolute;
+    right: 9px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-buscador:hover {
+    background: none;
+}
+
+.bi-search {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1.1rem;
+}
+
+.bi-search:hover {
+    color: rgb(184, 199, 84);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 50px 10px 10px;
+    font-size: 1rem;
+    justify-content: left;
+    border-radius: 20px;
+    width: 500px;
+}
+
+.form-control {
+    font-size: 0.9rem;
+}
+
+/*---------------------------------------boton del usuario--------------------------------------------------*/
+.contenedor-usuario {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    padding: 10px 5px;
+}
+
+
+.dropdownUser {
+    position: relative;
+    display: inline-block;
+    background-color: #7F879E;
+    border-radius: 8px;
+    color: white;
+}
+
+.dropdown-usuario {
+    background-color: #20335C;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dropdown-usuario:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown-usuario .bi {
+    margin-right: 8px;/
+}
+
+.contenedor-principal {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.bi-person {
+    color: white;
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #BFBFCA;
+    top: 100%;
+    left: 0;
+    min-width: 120px;
+    /* ligeramente más ancho */
+    min-height: 100px;
+    padding: 5px 1px;
+    /* espacio interno en el menú */
+    z-index: 1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dropdown-item {
+    background-color: #20335C;
+    color: #ffffff;
+    padding: 8px 15px;
+    /* más espacio alrededor del texto */
+    width: 115spx;
+    min-height: 45px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    /* Alinear verticalmente el contenido */
+    justify-content: center;
+    /* Alinear horizontalmente el contenido */
+}
+
+.dropdown-item:hover {
+    background-color: #7F879E;
+    color: white;
+    align-items: center;
+    transform: translateY(-2px);
+}
+
+.dropdownUser:hover .dropdown-menu {
+    display: block;
+}
+
+/*----------------------------------- Responsive -------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .Navbar {
+        flex-direction: row;
+    }
+
+    .btn-treslineas {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .logo-nombre {
+        width: 100%;
+    }
+
+    .contenedor-buscador {
+        width: 100%;
+        margin: 10px 2px;
+    }
+
+    .contenedor-usuario {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Navbar {
+        justify-content: row;
+    }
+
+    .btn-treslineas {
+        padding: 2px;
+        margin-right: 5px;
+    }
+
+    .logo-nombre {
+        max-width: 0px;
+        padding-left: 2px;
+    }
+
+    .nombre-app h3 {
+        font-size: 0px;
+    }
+
+    .dropdown-usuario {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .dropdown-item {
+        padding: 10px;
+    }
+
+    .logo-nombre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-buscador {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-buscador {
+        font-size: 0.9rem;
+    }
+
+    .bi-search {
+        font-size: 0.9rem;
+    }
+
+    .contenedor-usuario {
+        padding: 2px;
+        padding-left: 0px;
+        max-width: 100%;
+    }
+}

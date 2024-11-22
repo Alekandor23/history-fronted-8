@@ -1,0 +1,47 @@
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay background */
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.modal-body {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  max-height: 630px;
+  background-color:#FEF7F6; 
+  align-items: center;
+  justify-content: center;
+  left: 30%;
+  color: black;
+  border-radius: 20px;
+  align-content: center;
+  overflow-y:scroll;
+}
+
+.btn-close-perfil {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5px;
+  cursor: pointer;
+  border: none;
+  background-color: #FEF7F6;
+  color: #0a0a0a;
+  font-size: 2.4rem;
+}
+
+.btn-close-perfil:hover {
+  color: rgb(208, 208, 208);
+  background-color: #FEF7F6;
+  border: #a3a3a3;
+}

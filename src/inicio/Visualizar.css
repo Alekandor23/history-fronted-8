@@ -1,0 +1,117 @@
+/* Contenedor principal */
+.Visualizar {
+  display: flex;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 500px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Título */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Contenedor del contenido */
+.contenido-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contenido-centro h2 {
+  font-size: 20px;
+}
+
+/* Sección de usuario (avatar y nombre) */
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar-foto{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloqueado {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content;
+  pointer-events: none;
+}
+
+/* Información del usuario */
+.user-info {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-info label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text-V"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f5f5f5;
+  color: #999;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Botón de edición */
+.btn-editarP {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #20335C;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-editarP:hover {
+  background-color: #7F879E;
+}

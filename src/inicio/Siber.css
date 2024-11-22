@@ -1,0 +1,148 @@
+/* Estilo general para el sidebar */
+.sidebar-custom {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 77px;
+  height: calc(100vh - 30px);
+  overflow-y: auto;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombras para dar profundidad */
+  border-right: 1px solid #eaeaea;
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transform: translateX(-100%);
+  /* Inicialmente oculto fuera de la pantalla */
+  visibility: hidden;
+  box-sizing: border-box;
+  /* Asegura que padding y border se incluyan en el ancho */
+}
+
+/* Mostrar el sidebar cuando esté activo */
+.sidebar-custom.active {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* Header del sidebar */
+.sidebar-custom .offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1d3557;
+  color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar-custom .offcanvas-title {
+  margin: 0;
+  font-size: 25px;
+}
+
+/* Botones de lista en categorías y países */
+.accordion-button {
+  background-color: #457b9d;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #1d3557;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #1d3557;
+  color: #ffffff;
+}
+
+/* Listado de items */
+.list-group-item {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.list-group-item:hover {
+  background-color: #457b9d;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item .btn-link {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-link.active {
+  background-color: #1d3557;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-link h6{
+  font-size: 17px;
+  text-align: center;
+}
+
+/* Accordion body */
+.accordion-body {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Transiciones y sombras */
+.list-group-item {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Scroll en listas largas */
+.list-group {
+  overflow-y: auto;
+  max-height: 300px;
+  padding: 10px;
+}
+
+.sidebar-custom .btn-close {
+  color: #fff;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .sidebar-custom {
+    max-width: 80%;
+    /* Reducir el ancho del sidebar en pantallas pequeñas */
+    padding: 0.5px;
+    box-shadow: none;
+  }
+
+  .offcanvas-header {
+    padding: 10px;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
